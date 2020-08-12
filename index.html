@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FCC Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c147d62a0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section id="welcome-section">
+      <div class="welcome-content">
+        <h3 id="tagline"><a href="https://www.freecodecamp.org/learn/" target="_blank">@freecodecamp</a> portfolio</h3>
+        <h1 id="header">Charlotte Gray</h1>
+        <div id="bio-wrap">
+          <h5>I'm taking part in #100DaysofCode to stay committed to the endeavour that is learning to code.</h5>
+          <h5 id="twitter-follow"><i id="animate" class="fa fa-twitter" aria-hidden="true"></i>Follow me on Twitter and join me on my journey</h5>
+          <h5 id="counter"></h5>
+        </div>
+      </div>
+    </section>
+    <nav id="navbar">
+      <div class="link-container">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <section id="about">
+      <div id="about-content">
+        <div class="image-container">
+          <img id="profile-mobile" src="img/profile2CG.png" alt="charlotte-profile">
+          <img id="profile-desktop" src="img/charlotte-profile.png" alt="charlotte-profile">
+        </div>
+        <div id="about-text">
+          <h3 class="title">About</h3>
+          <h5 class="tagline">I am a creative designer branching into web development.</h5>
+          <p class="location">Based in London. Open to remote opportunties, and further down the line <span>very willing</span> to relocate to sunny locations.<br>
+          <br>Want to say hi, or have some words of wisdom for me?<br>I'd love to hear from you.</p>
+          <div id="message" class="message-button" class="selected">
+            <a onclick="changeButton()" href="mailto:charlotte.gray17@hotmail.co.uk?subject=Hi%20from%20FCC%20portfolio"><i class="fa fa-envelope" aria-hidden="true"></i>Message Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div id="project-content">
+        <h3 class="title">Projects</h3>
+        <p class="tagline">These are some projects I have worked on</p>
+        <div class="project-entries">
+          <a href="https://charlottegray17.github.io/technical-page/" target="_blank">
+            <div class="project-tile" id="technical">
+              <div class="title-container">
+                <h5 id="project-title">Technical Page</h5>
+              </div>
+            </div>
+          </a>
+          <a href="https://charlottegray17.github.io/unplugged-project/" target="_blank">
+            <div class="project-tile" id="unplugged">
+              <div class="title-container">
+                <h5 id="project-title">Unplugged Website</h5>
+              </div>
+            </div>
+          </a>
+          <a href="https://charlottegray17.github.io/product-page/" target="_blank">
+            <div class="project-tile" id="product">
+              <div class="title-container">
+                <h5 id="project-title">Product Page</h5>
+              </div>
+            </div>
+          </a>
+          <a href="https://charlottegray17.github.io/charlottegray17-panchos-pantry/" target="_blank">
+            <div class="project-tile" id="pantry">
+              <div class="title-container">
+                <h5 id="project-title">Pantry Site</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+    </section>
+    <section id="contact">
+      <div id="contact-content">
+        <h3 class="title">Connect with Me</h3>
+        <h5 class="tagline">Let's work together</h5>
+        <p>I am interested in gaining professional work experience in the tech field.<br> Feel free to contact me with potential opportunities.</p>
+        <div id="contact-links" class="link-selected">
+          <a onclick="changeLinks()" href="mailto:charlotte.gray17@hotmail.co.uk?subject=FCC%20Portfolio%20Enquiry" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a id="profile-link" href="https://github.com/charlottegray17" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/graygirl17" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="http://www.shesupandaway.com/" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          <a href="https://www.freecodecamp.org/charlottegray17" target="_blank"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <script type="text/javascript">
+      var initialDate = new Date(2020, 6, 11); //Setting date to June 30th beginning of challenge
+      var now = Date.now(); // Grabbing today's date
+      var difference = now - initialDate; // Subtracting starting challenge from today's date
+      var millisecondsPerDay = 24 * 60 * 60 * 1000; // working out the interval to be calculated
+      var daysSince = Math.floor(difference / millisecondsPerDay);
+
+      document.getElementById("counter").innerHTML = 'Day : ' + daysSince + ' / 100';
+
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+      //setting selected animation for email button
+      var button = document.getElementById("message");
+
+      function changeButton() {
+        button.classList.add("selected");
+      }
+
+    </script>
+  </body>
+</html>
