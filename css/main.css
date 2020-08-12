@@ -949,7 +949,7 @@ body {
   /*****************BLOG*******************/
 
   #blog {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 
   #blog-content .title,
@@ -958,7 +958,7 @@ body {
   }
 
   .card-wrap {
-    padding-top: 50px; 
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -973,14 +973,18 @@ body {
     background: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     text-align: center;
-    margin: 35px;
+    margin: 45px;
     transition: 0.5s ease;
     cursor: pointer;
   }
 
+  .card a {
+    text-decoration: none;
+  }
+
   .card-image {
     grid-area: image;
-    background: url("../img/antigua.jpg");
+    background: url("../img/rehashing.jpg");
     background-size: cover;
     background-position: center;
     border-top-left-radius: 15px;
@@ -988,13 +992,13 @@ body {
   }
 
   #photo-two {
-    background: url("../img/friends.jpg");
+    background: url("../img/100days.png");
     background-size: cover;
     background-position: center;
   }
 
   #photo-three {
-    background: url("../img/lookout.jpg");
+    background: url("../img/github.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -1004,7 +1008,7 @@ body {
     margin: 25px;
   }
 
-  .card-text .date {
+  .card-text .blog-title {
     font-size: 13px;
   }
 
@@ -1012,6 +1016,11 @@ body {
     color: grey;
     font-size: 15px;
     font-weight: 300;
+    margin: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
   }
 
   .card-text h2 {
@@ -1042,6 +1051,16 @@ body {
     padding: 10px;
     color: white;
   }
+
+  .card-stats i {
+    color: white;
+  }
+
+  .card-stats a {
+    color: white;
+    text-decoration: none;
+  }
+
 
   .card-stats .stat:hover {
     background-color: rgba(0,0,0,0.5);
