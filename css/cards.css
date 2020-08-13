@@ -14,6 +14,10 @@
   margin: 25px;
 }
 
+#flip-card:hover {
+  cursor: pointer;
+}
+
 #flip-card {
   position: relative;
   width: 100%;
@@ -84,32 +88,38 @@
   /* border-radius: 0.5rem; */
 }
 
-/*Styling the front of card*/
+/*Styling the front of all cards*/
 
-#pancho .flip-card-front {
+.flip-card-front {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
 }
 
-#pancho .card-front-title {
-  width: 100%;
-  height: 100%;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  background: #517fa4;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+/*putting images into individual cards*/
+
+#pacman-card {
+  background: url('../img/pacman.png');
 }
 
-#pancho .card-title h3 {
-  position: absolute;
-  top: 200px;
-  z-index: 2;
+#product-card {
+  background: url('../img/skin.png');
+}
+
+#unplugged-card {
+  background: url('../img/unplugged.png');
+}
+
+#technical-card {
+  background: url('../img/technical.png');
+}
+
+#jubilee-card {
+  background: url('../img/jubilee.png');
+}
+#panchos-card {
+  background: url('../img/panchos.png');
 }
 
 
@@ -131,7 +141,12 @@
   background: #517fa4;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  z-index:
+  z-index:;
+}
+
+.card-title {
+  color: white;
+  margin-top: 360px;
 }
 
 /*.card-front-image img {
@@ -139,10 +154,6 @@
   height: 100%;
   border-radius: 15px;
 }*/
-
-.flip-card-front {
-  background: url('../img/panchos.png');
-}
 
 
 /*Styling the back of card*/
