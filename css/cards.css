@@ -4,7 +4,6 @@
   flex-flow: wrap;
   align-content: center;
   justify-content: center;
-
 }
 
 .flip-card-container {
@@ -175,6 +174,47 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 40px;
-  max-width: 415px;
+  flex-direction: column;
+  margin: 30px;
+  max-width: 450px;
+}
+
+#flip-card a {
+  color: white;
+}
+
+#project-button  {
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background: white;
+}
+
+#project-button  {
+  color: black;
+  text-transform: uppercase;
+}
+
+#project-button:hover {
+  color: white;
+  background-color: black;
+  transition: var(--transition-speed);
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
