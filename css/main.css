@@ -21,7 +21,6 @@ body {
 #welcome-section,
 #about,
 #projects,
-#blog,
 #contact {
   height: 100vh;
   width: 100vw;
@@ -72,20 +71,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-/*creating header title wording shadows*/
-/*#welcome-section > .welcome-content > #header:after {
-  content: 'Charlotte Gray';
-  color: var(--secondary-color);
-  opacity: 0.15;
-  display: block;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 30px;
-  left: 125px;
-}*/
 
 #welcome-section > .welcome-content > #tagline {
   position: relative;
@@ -358,7 +343,7 @@ body {
 
 /*****************PROJECTS*******************/
 
-#projects {
+/*#projects {
   background-color: #b1dee0;
   height: auto;
   padding: 50px 0;
@@ -445,6 +430,173 @@ body {
 
 #technical-image-container {
   background-image: url('../img/technical-preview.png');
+}*/
+
+/********BLOG********/
+#blog {
+  padding-top: 100px;
+  background-color: #79aeb0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+#blog-content {
+  height: auto;
+
+}
+
+#blog-content .title,
+#blog-content .tagline   {
+  text-align: center;
+}
+
+.card-wrap {
+  background-color: #79aeb0;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 95vw;
+  height: auto;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 235px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: center;
+  margin: 45px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card-image {
+  grid-area: image;
+  background: url("../img/rehashing.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#photo-two {
+  background: url("../img/100days.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#photo-three {
+  background: url("../img/github.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-text .blog-title {
+  font-size: 13px;
+}
+
+.card-text p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.card span > em{
+  color: blue;
+  font-size: 12px;
+}
+
+.card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #309cba;
+}
+
+.card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.card-stats i {
+  color: white;
+}
+
+.card-stats a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.card-stats .stat:hover {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  transition: 0.5s;
+}
+
+.card-stats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-stats .value {
+  font-size: 22px;
+  font-weight: 500;
+}
+.card-stats .value sup{
+  font-size: 12px;
+}
+
+.card-stats .border {
+  border-left: 1px solid rgb(255, 255, 255, 0.4);
+  border-right: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.card .right {
+  border-bottom-right-radius: 15px;
+}
+
+.card .left {
+  border-bottom-left-radius: 15px;
 }
 
 
@@ -482,9 +634,56 @@ body {
 #contact-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 4rem;
+}
+
+#contact-links i {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 70px;
+  flex-flow: row wrap;
+  font-size: 2.5rem;
+}
+
+#contact-links i:hover {
+  color: var(--primary-color);
+  transform: translateY(-10px);
+  transition: var(--transition-speed) ease;
+}
+
+#contact-links a {
+  text-decoration: none;
+  color: white;
+}
+
+#contact {
+  background: rgb(18, 18, 18);
+  display: flex;
+  color: white;
+}
+
+#contact .title,
+#contact .tagline {
+}
+
+#contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+#contact-links {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
-  width: 70%;
+  width: 40%;
   padding-top: 4rem;
 }
 
@@ -506,6 +705,27 @@ body {
   color: white;
 }
 
+/*styling tool tips*/
+
+#email i {
+  margin: 0;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 90px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  top: 15px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  transition: var(--transition-speed) ease;
+
+}
+
 
 @media only screen and (min-width: 768px) {
 
@@ -513,7 +733,6 @@ body {
 
   #about,
   #projects,
-  #blog,
   #contact {
     height: 90vh;
     padding-top: 100px;
@@ -574,7 +793,7 @@ body {
   }
 
   /*creating header title wording shadows*/
-  #welcome-section > .welcome-content > #header:after {
+  /*#welcome-section > .welcome-content > #header:after {
     content: 'Charlotte Gray';
     color: var(--secondary-color);
     opacity: 0.15;
@@ -586,7 +805,7 @@ body {
     z-index: -1;
     top: 30px;
     left: 225px;
-  }
+  }*/
 
   #welcome-section > .welcome-content > #tagline {
     position: relative;
@@ -733,6 +952,8 @@ body {
   #about-text p span {
     text-decoration: underline;
   }
+
+  /**placing and styling message button***/
 
   #about-text .message-button {
     position: absolute;
@@ -948,206 +1169,11 @@ body {
 
   /*****************BLOG*******************/
 
-  #blog {
-    padding-bottom: 100px;
-    height: auto; 
-  }
-
-  #blog-content .title,
-  #blog-content .tagline   {
-    text-align: center;
-  }
-
-  .card-wrap {
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .card {
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 210px 235px 80px;
-    grid-template-areas: "image" "text" "stats";
-    border-radius: 18px;
-    background: white;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    text-align: center;
-    margin: 45px;
-    transition: 0.5s ease;
-    cursor: pointer;
-  }
-
-  .card a {
-    text-decoration: none;
-  }
-
-  .card-image {
-    grid-area: image;
-    background: url("../img/rehashing.jpg");
-    background-size: cover;
-    background-position: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
-
-  #photo-two {
-    background: url("../img/100days.png");
-    background-size: cover;
-    background-position: center;
-  }
-
-  #photo-three {
-    background: url("../img/github.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-
-  .card-text {
-    grid-area: text;
-    margin: 25px;
-  }
-
-  .card-text .blog-title {
-    font-size: 13px;
-  }
-
-  .card-text p {
-    color: grey;
-    font-size: 15px;
-    font-weight: 300;
-    margin: 10px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-  }
-
-  .card-text h2 {
-    margin-top: 0px;
-    font-size: 28px;
-  }
-
-  .card span > em{
-    color: blue;
-    font-size: 12px;
-  }
-
-  .card-stats {
-    grid-area: stats;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: #309cba;
-  }
-
-  .card-stats .stat {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    color: white;
-  }
-
-  .card-stats i {
-    color: white;
-  }
-
-  .card-stats a {
-    color: white;
-    text-decoration: none;
-  }
-
-
-  .card-stats .stat:hover {
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    transition: 0.5s;
-  }
-
-  .card-stats .type {
-    font-size: 11px;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-
-  .card-stats .value {
-    font-size: 22px;
-    font-weight: 500;
-  }
-  .card-stats .value sup{
-    font-size: 12px;
-  }
-
-  .card-stats .border {
-    border-left: 1px solid rgb(255, 255, 255, 0.4);
-    border-right: 1px solid rgb(255, 255, 255, 0.4);
-  }
-
-  .card:hover {
-    transform: scale(1.2);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-  }
-
-  .card .right {
-    border-bottom-right-radius: 15px;
-  }
-
-  .card .left {
-    border-bottom-left-radius: 15px;
-  }
 
 
   /*****************CONTACT*******************/
 
-  #contact {
-    background: rgb(18, 18, 18);
-    display: flex;
-    color: white;
-  }
 
-  #contact .title,
-  #contact .tagline {
-  }
 
-  #contact-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  #contact-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    justify-content: space-around;
-    width: 40%;
-    padding-top: 4rem;
-  }
-
-  #contact-links i {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    font-size: 2.5rem;
-  }
-
-  #contact-links i:hover {
-    color: var(--primary-color);
-    transform: translateY(-10px);
-    transition: var(--transition-speed) ease;
-  }
-
-  #contact-links a {
-    text-decoration: none;
-    color: white;
-  }
 
 }
