@@ -225,6 +225,19 @@ body {
   text-decoration: underline;
 }
 
+#message {
+  margin-right: 250px;
+}
+
+#resume {
+  width: 170px;
+  text-align: center;
+}
+
+#resume i {
+  margin-right: 20px;
+}
+
 .message-button {
   margin-top: 2rem;
   padding: 15px;
